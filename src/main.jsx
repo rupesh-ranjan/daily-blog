@@ -3,15 +3,15 @@ import { createRoot } from "react-dom/client";
 import "./index.css";
 import App from "./App.jsx";
 import { Provider } from "react-redux";
-import store from "./store/store";
-import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import Home from "./pages/home.jsx";
+import store from "./store/store.js";
+import { RouterProvider, createBrowserRouter } from "react-router-dom";
+import Home from "./pages/Home.jsx";
 import { AuthLayout, Login } from "./components/index.js";
-import Post from "./pages/Post.jsx";
-import AddPost from "./pages/AddPost.jsx";
-import AllPosts from "./pages/AllPosts.jsx";
-import EditPosts from "./pages/EditPosts.jsx";
-import Signup from "./pages/Signup.jsx";
+import Post from "./pages/Post";
+import AddPost from "./pages/AddPost";
+import AllPosts from "./pages/AllPosts";
+import EditPost from "./pages/EditPost";
+import Signup from "./pages/Signup";
 
 const router = createBrowserRouter([
     {
@@ -61,7 +61,7 @@ const router = createBrowserRouter([
                 element: (
                     <AuthLayout authentication>
                         {" "}
-                        <EditPosts />
+                        <EditPost />
                     </AuthLayout>
                 ),
             },
